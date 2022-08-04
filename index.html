@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping Pong</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <section class="section">
+      <!---    <main class="main">
+      <header class="headerImg">
+        <img src="" class="img" alt="ping pong game" />
+      </header>
+
+      <h3 class="heading">Ping pong Score Keeper</h3>
+      <div class="container">
+        <h1>
+          <span id="firstPlayer">0</span> to <span id="secondPlayer">0</span>
+        </h1>
+        <p>Use the button below to keep score</p>
+
+        <label for="numbers">Playing to</label>
+        <select name="numbers" id="numbers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <div class="btnsParent">
+        <button id="playerOne">+1 Player one</button>
+        <button id="playerTwo">+1 Player two</button>
+        <button type="reset" id="reset">Reset</button>
+      </div>
+    </main>
+--->
+      <div class="container">
+        <div class="columns">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-2by1">
+                  <img
+                    src="https://media.istockphoto.com/photos/table-tennis-equipment-picture-id1192307192?k=20&m=1192307192&s=170667a&w=0&h=7OyzFcAo0AkMLdqjT-0WIYigvakYL8eHWJmGgtOZBtQ="
+                    alt="ping pong"
+                  />
+                </figure>
+              </div>
+              <header class="card-header">
+                <p class="card-header-title">Ping pong Score Keeper</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <h1 class="title is-1">
+                    <span id="firstPlayer">0</span> to
+                    <span id="secondPlayer">0</span>
+                  </h1>
+                  <p class="subtitle">Use the button below to keep score</p>
+                  <label for="numbers" class="label is-large is-inline"
+                    >Playing to</label
+                  >
+                  <div class="select is-rounded">
+                    <select name="numbers" id="numbers">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <button
+                  id="playerOne"
+                  class="is-primary button card-footer-item is-large"
+                >
+                  +1 Player one
+                </button>
+                <button
+                  id="playerTwo"
+                  class="is-info button card-footer-item is-large"
+                >
+                  +1 Player two
+                </button>
+                <button
+                  id="reset"
+                  class="is-danger button card-footer-item is-large"
+                >
+                  Reset
+                </button>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
