@@ -1,3 +1,63 @@
+const p1 = {
+   score: 0,
+   button: document.querySelector('#playerOne'),
+   span: document.querySelector('#firstPlayer')
+}
+const p2 = {
+   score: 0,
+   button: document.querySelector('#playerTwo'),
+   span: document.querySelector('#secondPlayer')
+}
+
+const btnReset = document.querySelector('#reset');
+const select = document.querySelector('#numbers');
+let winnerScore = 5;
+let gameOver = false;
+
+function updateScore(player, otherPlayers) {
+   if (!gameOver) {
+      player.score += 1;
+      if (player.score === winnerScore) {
+         gameOver = true;
+         player.span.classList.add('has-text-success')
+         otherPlayers.span.classList.add('has-text-danger')
+         player.button.disabled = true;
+         otherPlayers.button.disabled = true;
+
+      }
+      player.span.textContent = player.score;
+   }
+}
+
+p1.button.addEventListener('click', function () {
+   updateScore(p1, p2)
+})
+
+
+p2.button.addEventListener('click', function () {
+   updateScore(p2, p1)
+})
+
+btnReset.addEventListener('click', reset)
+
+select.addEventListener('change', function () {
+   winnerScore = parseInt(this.value)
+   reset()
+})
+
+function reset() {
+   gameOver = false;
+   for (let p of [p1, p2]) {
+      p.score = 0;
+      p.span.textContent = 0;
+      p.span.classList.remove('has-text-success', 'has-text-danger')
+      p.button.disabled = false
+   }
+}
+
+/*
+
+
 const btnLeft = document.querySelector('#playerOne');
 const btnRight = document.querySelector('#playerTwo');
 const btnReset = document.querySelector('#reset');
@@ -61,7 +121,5 @@ select.addEventListener('change', function () {
 
 winnerScore=parseInt(this.value)
 reset()
-
-
-
 })
+*/
